@@ -1,0 +1,30 @@
+<h1>Sign Up</h1>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form action="/users" method="post" class="form">
+        <%= render 'shared/error_messages' %>
+            <div class='form-group'>
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"
+                    class='form-control'>
+            </div>
+            <div class='form-group'>
+                <input type="text" name="user[name]" value="" class="form-control" placeholder="First name">
+            </div>
+            <div class='form-group'>
+                <input type="email" name="user[email]" value="" class="form-control" placeholder=" email">
+            </div>
+            <div class='form-group'>
+                <input type="password" name="user[password]" value="" class="form-control" placeholder=" password">
+            </div>
+            <div class='form-group'>
+                <input type="password" name="user[password_confirmation]" value="" class="form-control"
+                    placeholder="password confirmation">
+                <div class='form-group'>
+                    <button class="btn btn-primary" type='submit'>Create My Account</button>
+                </div>
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>
